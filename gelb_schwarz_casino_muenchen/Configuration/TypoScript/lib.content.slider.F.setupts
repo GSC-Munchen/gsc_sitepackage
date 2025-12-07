@@ -1,0 +1,43 @@
+lib.content.slider.F = CONTENT
+lib.content.slider.F {
+  table = tx_news_domain_model_news
+  select {
+    # Seiten-ID mit dem News Container:
+    pidInList = {$themes.configuration.container.news}
+    # Zeige nur den letzten Eintrag an:
+    max = 1
+    orderBy = uid DESC
+
+    # SQL Statement zur Abfrage und Filterung nach der Kategorie und Umsetzung in TypoScript:
+    # SELECT * FROM sys_category_record_mm LEFT JOIN tx_news_domain_model_news ON tx_news_domain_model_news.uid = sys_category_record_mm.uid_foreign WHERE sys_category_record_mm.uid_local = 1 
+    leftjoin = sys_category_record_mm ON (sys_category_record_mm.uid_foreign = tx_news_domain_model_news.uid)
+    where = (sys_category_record_mm.uid_local = {$themes.configuration.pages.slider.catimage6})
+  }
+  renderObj = COA
+  renderObj {
+
+    1 = TEXT
+    1.value = {$themes.configuration.pages.slider.label6}
+    1.wrap = <h2>|</h2>
+
+    2 = TEXT
+    2.value = <h3><a href='{$themes.configuration.baseurl}/index.php?id={$themes.configuration.pages.newsdetail}&tx_news_pi1[news]=%5Baction%5D=detail&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Bnews%5D=
+    # 2.value = <h3><a href='{$themes.configuration.baseurl}/index.php?id=
+
+    3 = TEXT
+    # 3.field = uid
+    3.value = 430
+    3.wrap = | '>
+
+    4 = TEXT
+    4.field = title
+    4.crop = 50|...|1
+    4.wrap = |</a></h3>
+    
+    5 = TEXT
+    5.field = teaser
+    5.crop = 500|...|1
+    5.wrap = <p>|</p>
+        
+  }
+}

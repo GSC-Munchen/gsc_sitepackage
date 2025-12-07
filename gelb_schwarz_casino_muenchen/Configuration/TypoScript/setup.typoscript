@@ -3,6 +3,16 @@
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
 
+####################
+####   SLIDER   ####
+####################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gelb_schwarz_casino_muenchen/Configuration/TypoScript/lib.content.slider.A.setupts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gelb_schwarz_casino_muenchen/Configuration/TypoScript/lib.content.slider.B.setupts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gelb_schwarz_casino_muenchen/Configuration/TypoScript/lib.content.slider.C.setupts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gelb_schwarz_casino_muenchen/Configuration/TypoScript/lib.content.slider.D.setupts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gelb_schwarz_casino_muenchen/Configuration/TypoScript/lib.content.slider.E.setupts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gelb_schwarz_casino_muenchen/Configuration/TypoScript/lib.content.slider.F.setupts">
+
 
 ##############
 #### PAGE ####
@@ -21,7 +31,7 @@ page {
     }
 
     includeJSFooterlibs {
-
+        popper = EXT:gelb_schwarz_casino_muenchen/Resources/Public/JavaScript/Custom/popper/popper.min.js
     }
 
     includeJSFooter {
