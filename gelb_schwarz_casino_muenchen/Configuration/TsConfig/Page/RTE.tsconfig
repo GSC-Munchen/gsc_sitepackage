@@ -1,0 +1,8 @@
+#############
+#### RTE ####
+#############
+RTE {
+    default {
+        preset = gelb_schwarz_casino_muenchen
+    }
+}

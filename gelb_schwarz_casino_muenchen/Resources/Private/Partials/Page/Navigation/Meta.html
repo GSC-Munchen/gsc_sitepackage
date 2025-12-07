@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="footer-copyright">
+<table class="meta-menu-table">
+    <tr>
+    <f:if condition="{theme.socialmedia.channels}">
+        <f:for each="{theme.socialmedia.channels}" key="channelKey" as="channelOptions">
+            <f:if condition="{channelOptions.url}">
+                <td class="meta-menuitem">
+                    <a class="sociallinks-link sociallinks-link-{channelKey}" href="{channelOptions.url}" title="{channelOptions.label}" rel="noopener" target="_blank">
+                        <span class="sociallinks-link-label">{channelOptions.label}</span>
+                    </a>
+                </td>
+            </f:if>
+        </f:for>
+    </f:if>
+    <td class="meta-spacer">&nbsp;</td>
+    <f:if condition="{metanavigation}">
+        <f:for each="{metanavigation}" as="item" iteration="metaiteration">
+            <td class="meta-menuitem" {f:if(condition: item.active, then:' class="active"')}>
+                <a href="{item.link}"{f:if(condition: '{item.target}', then: ' target="{item.target}"')}{f:if(condition: '{item.target} == "_blank"', then: ' rel="noopener noreferrer"')} title="{item.title}">
+                    <span>{item.title}</span>
+                </a>
+            </td>
+        </f:for>
+    </f:if>
+    </tr>
+</table>
+</div>
+</html>

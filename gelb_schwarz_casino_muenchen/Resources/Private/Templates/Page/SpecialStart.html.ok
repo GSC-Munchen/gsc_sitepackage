@@ -1,0 +1,66 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Border">
+
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '3', slide: '{theme.pagelayout.{pagelayout}.colPos.3.slide}'}" />
+
+</f:section>
+<f:section name="Main">
+
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '8', slide: '{theme.pagelayout.{pagelayout}.colPos.8.slide}'}" />
+
+    <div id="Startseite">
+    <div class="section section-default"></div>
+
+<!-- Slick slider -->
+    <div class="slick-logo">
+        <img src="https://www.gsc-muenchen.de/typo3conf/ext/bootstrap_package/Resources/Public/Images/startseite_logo.png" class="Slick-brandImage" alt="Gelb-Schwarz-Casino" width="120" height="120"/>
+    </div>
+    <div class="slick">
+        <div class="slick-slide">
+            <div class="slick-image slick-zoom"><f:image src="EXT:bootstrap_package/Resources/Public/Images/startseite_latein-foto.jpg" alt="Lateinpaar" /></div>
+            <div class="slick-lines"><f:image src="EXT:bootstrap_package/Resources/Public/Images/geschwungege-linie-startseite-fotos.png" alt="Linien" /></div>
+            <div class="slick-text"><f:image src="EXT:bootstrap_package/Resources/Public/Images/startseite_latein-text.png" alt="Text Latein" /></div>
+            <div class="ss-caption-wrap"><div class="ss-caption">{f:cObject(typoscriptObjectPath: 'lib.content.slider.A')}</div></div>
+        </div>
+        <div class="slick-slide">
+            <div class="slick-image slick-zoom"><f:image src="EXT:bootstrap_package/Resources/Public/Images/startseite_standard-foto.jpg" alt="Standardpaar" /></div>
+            <div class="slick-lines"><f:image src="EXT:bootstrap_package/Resources/Public/Images/geschwungege-linie-startseite-fotos.png" alt="Linien" /></div>
+            <div class="slick-text"><f:image src="EXT:bootstrap_package/Resources/Public/Images/startseite_standard-text.png" alt="Text Standard" /></div>
+            <div class="ss-caption-wrap"><div class="ss-caption">{f:cObject(typoscriptObjectPath: 'lib.content.slider.B')}</div></div>
+        </div>
+        <div class="slick-slide">
+            <div class="slick-image slick-zoom"><f:image src="EXT:bootstrap_package/Resources/Public/Images/startseite_breitensport-foto.jpg" alt="Breitensport" /></div>
+            <div class="slick-lines"><f:image src="EXT:bootstrap_package/Resources/Public/Images/geschwungege-linie-startseite-fotos.png" alt="Linien" /></div>
+            <div class="slick-text"><f:image src="EXT:bootstrap_package/Resources/Public/Images/startseite_breitensport-text.png" alt="Text Breitensport" /></div>
+            <div class="ss-caption-wrap"><div class="ss-caption">{f:cObject(typoscriptObjectPath: 'lib.content.slider.C')}</div></div>
+        </div>
+    <!--
+        <div class="slick-slide">
+            <div class="slick-image slick-zoom"><f:image src="EXT:bootstrap_package/Resources/Public/Images/startseite_ball-der-nationen.jpg" alt="Ball der Nationen" /></div>
+            <div class="slick-lines"><f:image src="EXT:bootstrap_package/Resources/Public/Images/geschwungege-linie-startseite-fotos.png" alt="Linien" /></div>
+            <div class="slick-text"><f:image src="EXT:bootstrap_package/Resources/Public/Images/startseite_ball-der-nationen-text.png" alt="Text Ball der Nationen" /></div>
+            <div class="ss-caption-wrap"><div class="ss-caption">{f:cObject(typoscriptObjectPath: 'lib.content.slider.D')}</div></div>
+        </div>
+    -->
+    </div>
+
+    <!-- Initialisierung des Sliders -->
+    <f:asset.script identifier="slick-lib" src="EXT:bootstrap_package/Resources/Public/JavaScript/Custom/slick.min.js" />
+    <f:asset.script identifier="slick" src="EXT:bootstrap_package/Resources/Public/JavaScript/Custom/slick.init.js" />
+
+    <div class="section section-light">
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0', slide: '{theme.pagelayout.{pagelayout}.colPos.0.slide}'}" />
+    </div>
+
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '9', slide: '{theme.pagelayout.{pagelayout}.colPos.9.slide}'}" />
+    </div>
+
+</f:section>
+<f:section name="Footer">
+
+    <f:render partial="Structure/FooterContent" arguments="{_all}" />
+
+</f:section>
+</html>
+

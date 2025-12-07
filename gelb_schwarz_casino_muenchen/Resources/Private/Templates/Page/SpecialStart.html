@@ -1,0 +1,74 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Border">
+
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '3', slide: '{theme.pagelayout.{pagelayout}.colPos.3.slide}'}" />
+
+</f:section>
+<f:section name="Main">
+
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '8', slide: '{theme.pagelayout.{pagelayout}.colPos.8.slide}'}" />
+
+    <div id="Startseite">
+        <div class="section section-default"></div>
+
+        <!-- Slick Slider -->
+        <div class="slick-logo">
+            <f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/startseite_logo.png" alt="Gelb-Schwarz-Casino" class="Slick-brandImage" height="120" width="120" />
+        </div>
+        <div class="slick">
+            <div class="slick-slide">
+                <div class="slick-image slick-zoom"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/startseite_latein-foto.jpg" alt="Lateinpaar" /></div>
+                <div class="slick-lines"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/geschwungege-linie-startseite-fotos.png" alt="Linien" /></div>
+                <div class="slick-text"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/startseite_latein-text.png" alt="Text Latein" /></div>
+                <div class="ss-caption-wrap"><div class="ss-caption"></div></div>
+            </div>
+            <div class="slick-slide">
+                <div class="slick-image slick-zoom"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/startseite_standard-foto.jpg" alt="Standardpaar" /></div>
+                <div class="slick-lines"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/geschwungege-linie-startseite-fotos.png" alt="Linien" /></div>
+                <div class="slick-text"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/startseite_standard-text.png" alt="Text Standard" /></div>
+                <div class="ss-caption-wrap"><div class="ss-caption"></div></div>
+            </div>
+            <div class="slick-slide">
+                <div class="slick-image slick-zoom"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/startseite_breitensport-foto.jpg" alt="Breitensport" /></div>
+                <div class="slick-lines"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/geschwungege-linie-startseite-fotos.png" alt="Linien" /></div>
+                <div class="slick-text"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/startseite_breitensport-text.png" alt="Text Breitensport" /></div>
+                <div class="ss-caption-wrap"><div class="ss-caption"></div></div>
+            </div>
+            <div class="slick-slide">
+                <div class="slick-image slick-zoom"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/startseite_seniorentreff_foto.png" alt="Seniorentreff" /></div>
+                <div class="slick-lines"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/geschwungege-linie-startseite-fotos.png" alt="Linien" /></div>
+                <div class="slick-text"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/startseite_seniorentreff_text.png" alt="Text Seniorentreff" /></div>
+                <div class="ss-caption-wrap"><div class="ss-caption"></div></div>
+            </div>
+
+            <!--
+            <div class="slick-slide">
+                <div class="slick-image slick-zoom"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/startseite_ball-der-nationen.jpg" alt="Ball der Nationen" /></div>
+                <div class="slick-lines"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/geschwungege-linie-startseite-fotos.png" alt="Linien" /></div>
+                <div class="slick-text"><f:image src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/Images/startseite_ball-der-nationen-text.png" alt="Text Ball der Nationen" /></div>
+                <div class="ss-caption-wrap"><div class="ss-caption"></div></div>
+            </div>
+            -->
+
+        </div>
+
+        <!-- Initialisierung des Sliders -->
+        <f:asset.script identifier="slick-lib" src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/JavaScript/Custom/slick.min.js" />
+        <f:asset.script identifier="slick" src="EXT:gelb_schwarz_casino_muenchen/Resources/Public/JavaScript/Custom/slick.init.js" />
+        <!-- Ende Slick Slider-->
+
+        <div class="section section-light">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0', slide: '{theme.pagelayout.{pagelayout}.colPos.0.slide}'}" />
+        </div>
+    
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '9', slide: '{theme.pagelayout.{pagelayout}.colPos.9.slide}'}" />
+    </div>
+
+</f:section>
+<f:section name="Footer">
+
+    <f:render partial="Structure/FooterContent" arguments="{_all}" />
+
+</f:section>
+</html>

@@ -1,0 +1,4 @@
+#
+# BACKENDLAYOUTS
+#
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:gelb_schwarz_casino_muenchen/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts" extensions="tsconfig">
